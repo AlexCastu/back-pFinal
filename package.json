@@ -1,0 +1,24 @@
+{
+  "name": "back-pfinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexCastu/back-pFinal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexCastu/back-pFinal/issues"
+  },
+  "homepage": "https://github.com/AlexCastu/back-pFinal#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^6.6.5"
+  }
+}
