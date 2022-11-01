@@ -1,10 +1,7 @@
-const PArapentes = require("../models/ProductsModel");
+const Parapentes = require("../models/ParapenteModel");
 
-const getParapentes = async (marcaA, precioA, busquedaManual, page = 1) => {
-   return await Products.paginate(
-      { "manufacter.name": marcaA || /.+/, price: { $lte: precioA }, name: { $regex: busquedaManual, $options: "i" } },
-      { page, sort: { price: -1 }, limit: 5 }
-   );
+const getParapentes = async () => {
+   return await Parapentes.find().populate("marca._id").exec();
 };
 
 module.exports = getParapentes;

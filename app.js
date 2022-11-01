@@ -1,9 +1,9 @@
-require("./monguse");
+require("./conexionMongo.js");
 const express = require("express");
 const app = express();
-const routerMongo = require("./routes/routerMongo");
-const config = require("./config.js");
+const routerTienda = require("./routes/rutasTienda");
 const cors = require("cors");
+const config = require("./config");
 app.use(cors());
 
 app.use(express.static("public"));
@@ -11,7 +11,7 @@ app.use("/", (req, resp, next) => {
    next();
 });
 
-app.use("/tienda", routerMongo);
+app.use("/tienda", routerTienda);
 
 app.use((err, req, resp, next) => {
    console.log("Error:" + err);
